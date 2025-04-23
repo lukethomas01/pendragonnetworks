@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import ContactForm from "./components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us | Pendragon Networks",
@@ -211,136 +212,7 @@ export default function ContactPage() {
             
             {/* Contact Form */}
             <div>
-              <div className="bg-white/5 rounded-lg border border-white/10 p-8">
-                <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium mb-2">
-                        First Name*
-                      </label>
-                      <input 
-                        type="text" 
-                        id="firstName" 
-                        name="firstName"
-                        className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-dragon-red focus:border-transparent"
-                        placeholder="Your first name"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium mb-2">
-                        Last Name*
-                      </label>
-                      <input 
-                        type="text" 
-                        id="lastName" 
-                        name="lastName"
-                        className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-dragon-red focus:border-transparent"
-                        placeholder="Your last name"
-                        required
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email Address*
-                    </label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      name="email"
-                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-dragon-red focus:border-transparent"
-                      placeholder="your.email@example.com"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                      Phone Number
-                    </label>
-                    <input 
-                      type="tel" 
-                      id="phone" 
-                      name="phone"
-                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-dragon-red focus:border-transparent"
-                      placeholder="+44 7700 900000"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium mb-2">
-                      Company Name
-                    </label>
-                    <input 
-                      type="text" 
-                      id="company" 
-                      name="company"
-                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-dragon-red focus:border-transparent"
-                      placeholder="Your company"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium mb-2">
-                      Service of Interest
-                    </label>
-                    <select 
-                      id="service" 
-                      name="service"
-                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-dragon-red focus:border-transparent"
-                    >
-                      <option value="">Please select a service</option>
-                      <option value="rack-installations">Rack & Stack Installations</option>
-                      <option value="network-engineering">Network Engineering</option>
-                      <option value="wifi-deployment">Wi-Fi Surveys & Deployment</option>
-                      <option value="structured-cabling">Structured Cabling</option>
-                      <option value="remote-support">Remote Support Services</option>
-                      <option value="cctv-integration">CCTV & IP Camera Integration</option>
-                      <option value="ubiquiti-cisco-solutions">Ubiquiti & Cisco Solutions</option>
-                      <option value="other">Other (Please Specify)</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Message*
-                    </label>
-                    <textarea 
-                      id="message" 
-                      name="message"
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-dragon-red focus:border-transparent"
-                      placeholder="Please describe your requirements..."
-                      required
-                    ></textarea>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <input 
-                      type="checkbox" 
-                      id="privacy" 
-                      name="privacy"
-                      className="mt-1 h-4 w-4 rounded border-white/20 bg-white/10 text-dragon-red focus:ring-dragon-red"
-                      required
-                    />
-                    <label htmlFor="privacy" className="ml-2 block text-sm text-white/70">
-                      I agree to the <Link href="/privacy-policy" className="text-dragon-red hover:underline">Privacy Policy</Link> and consent to Pendragon Networks processing my data for the purpose of responding to my enquiry.
-                    </label>
-                  </div>
-                  
-                  <div>
-                    <button
-                      type="submit"
-                      className="w-full bg-dragon-red hover:bg-opacity-90 !text-white font-medium border border-white py-3 px-6 rounded-md transition-all duration-200 hover:!text-black hover:border-black"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
