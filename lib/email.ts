@@ -7,11 +7,19 @@ export const resend = new Resend(resendApiKey);
 // Company information
 export const companyInfo = {
   name: 'Pendragon Networks',
-  email: 'hello@pendragonnetworks.co.uk',
+  email: 'hello@pendragonnetworks.com',
   phone: '+44 (0) 7916 214 843',
   address: 'Unit 8, Bridgend Business Park, Bridgend, CF31 3SH',
   website: 'https://pendragonnetworks.com',
   logo: 'https://pendragonnetworks.com/pendragon-dragon-network-icon-shield-logo.png'
+};
+
+// Email sender configuration - using Resend's default domain since the custom domain needs verification
+export const emailSender = {
+  // Use a Resend-provided email address until your domain is verified in Resend dashboard
+  // Format: "Your Name <onboarding@resend.dev>" or "Your Name <yourteam@resend.dev>"
+  from: `${companyInfo.name} <onboarding@resend.dev>`,
+  replyTo: companyInfo.email
 };
 
 // Email template for customer confirmation
@@ -245,7 +253,8 @@ export async function sendContactEmails(
   try {
     // Send confirmation email to customer
     const customerEmailResponse = await resend.emails.send({
-      from: `Pendragon Networks <${companyInfo.email}>`,
+      from: emailSender.from,
+      replyTo: emailSender.replyTo,
       to: [customerEmail],
       subject: 'Thank You for Contacting Pendragon Networks',
       html: generateCustomerEmail(customerName, service),
@@ -253,7 +262,8 @@ export async function sendContactEmails(
 
     // Send notification email to business
     const businessEmailResponse = await resend.emails.send({
-      from: `Website Contact Form <${companyInfo.email}>`,
+      from: emailSender.from,
+      replyTo: emailSender.replyTo,
       to: [companyInfo.email],
       subject: `New Website Enquiry: ${service || 'General Enquiry'}`,
       html: generateBusinessEmail(customerName, customerEmail, customerPhone, message, service, location),
