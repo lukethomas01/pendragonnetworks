@@ -291,6 +291,14 @@ export const services: Service[] = [
 
 // Locations data
 export const locations: Location[] = [
+  // Adding a new location to demonstrate dynamic sitemap generation
+  {
+    id: "newport",
+    name: "Newport",
+    county: "Gwent",
+    postcode: "NP20",
+    description: "A major city in southeast Wales, Newport is an important business and manufacturing hub with growing technology sector. Pendragon Networks provides complete IT infrastructure services across Newport's business districts and surrounding areas."
+  },
   {
     id: "cardiff",
     name: "Cardiff",
