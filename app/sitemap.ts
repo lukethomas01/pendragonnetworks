@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { services } from '@/lib/data';
+import { services, locations } from '@/lib/data';
 
 type SitemapEntry = {
   url: string;
@@ -13,6 +13,8 @@ function getBaseURL() {
   return process.env.NEXT_PUBLIC_SITE_URL || 'https://pendragonnetworks.com';
 }
 
+// Sitemap is automatically generated and updates when services or locations change in data.ts
+// Next.js will regenerate this when deployed based on ISR settings
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getBaseURL();
   const currentDate = new Date().toISOString();
@@ -59,21 +61,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Location routes based on services
-  const locations = [
-    'cardiff',
-    'swansea',
-    'bridgend',
-    'port-talbot',
-    'llanelli',
-    'merthyr',
-    'aberdare',
-    'carmarthen'
-  ];
-
+  // Location routes based on services - using the locations imported from data.ts
   const serviceLocationRoutes = services.flatMap(service => 
     locations.map(location => ({
-      url: `${baseUrl}/services/${service.id}/${location}`,
+      url: `${baseUrl}/services/${service.id}/${location.id}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
