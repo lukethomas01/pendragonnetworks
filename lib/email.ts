@@ -14,11 +14,10 @@ export const companyInfo = {
   logo: 'https://pendragonnetworks.com/pendragon-dragon-network-icon-shield-logo.png'
 };
 
-// Email sender configuration - using Resend's default domain since the custom domain needs verification
+// Email sender configuration - using the verified domain
 export const emailSender = {
-  // Use a Resend-provided email address until your domain is verified in Resend dashboard
-  // Format: "Your Name <onboarding@resend.dev>" or "Your Name <yourteam@resend.dev>"
-  from: `${companyInfo.name} <onboarding@resend.dev>`,
+  // Using the verified domain email address
+  from: `${companyInfo.name} <hello@pendragonnetworks.com>`,
   replyTo: companyInfo.email
 };
 
