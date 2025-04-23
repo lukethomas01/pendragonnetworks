@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+:root {
+  --dark-slate: #1a1a1a;
+  --dragon-red: #e60000;
+  --white: #ffffff;
+  --background: var(--dark-slate);
+  --foreground: var(--white);
+  --accent: var(--dragon-red);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+a {
+  color: var(--accent);
+  transition: all 200ms;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Custom colors */
+.text-dragon-red {
+  color: var(--dragon-red);
+}
+
+.bg-dragon-red {
+  background-color: var(--dragon-red);
+}
+
+.border-dragon-red {
+  border-color: var(--dragon-red);
+}
+
+.text-dark-slate {
+  color: var(--dark-slate);
+}
+
+.bg-dark-slate {
+  background-color: var(--dark-slate);
+}
+
+.border-dark-slate {
+  border-color: var(--dark-slate);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc0000;
+}
+
+/* Common layout utilities */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .md-flex-row {
+    flex-direction: row;
+  }
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .md-px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .md-py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}

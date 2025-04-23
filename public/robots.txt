@@ -1,0 +1,11 @@
+# robots.txt file for Pendragon Networks
+
+User-agent: *
+Allow: /
+
+# Disallow heavy resource loads from bots
+Disallow: /*?preview=*
+Disallow: /api/*
+
+# Sitemap location
+Sitemap: https://pendragonnetworks.com/sitemap.xml
