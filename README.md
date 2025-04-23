@@ -1,109 +1,94 @@
 # Pendragon Networks Website
 
-A modern, responsive website for Pendragon Networks, a technical services provider in South Wales specializing in network engineering, rack & stack services, and IT infrastructure solutions.
+A Next.js 15 website for Pendragon Networks, a technical services provider based in South Wales.
 
-## Tech Stack
+## Features
 
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 4
-- **Rendering Strategy**: Static Site Generation with Incremental Static Regeneration (ISR)
-- **Deployment Target**: Vercel-optimized
+- **Modern Next.js 15 with App Router**
+- **React Server Components**
+- **Tailwind CSS for styling**
+- **Fully responsive design**
+- **Static Site Generation with ISR**
+- **Dynamic routes for services and locations**
+- **SEO optimized**
+- **Automated sitemap generation**
+- **Contact form with email functionality**
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
 
 ## Project Structure
 
 ```
-/
-├── app/                    # Next.js App Router
-│   ├── page.tsx            # Homepage
-│   ├── layout.tsx          # Root layout with metadata
-│   ├── services/           # Services routes
-│   │   ├── page.tsx        # Services overview page
-│   │   ├── [slug]/         # Individual service pages
-│   │   └── [service]/[location]/ # Location-specific service pages for SEO
-│   └── contact/            # Contact page
-├── components/             # Reusable UI components
-│   ├── Header.tsx          # Site navigation
-│   └── Footer.tsx          # Site footer
-├── lib/                    # Shared utilities and data
-│   └── data.ts             # Services and locations data
-├── public/                 # Static assets
-│   └── images/             # Image files
-└── tailwind.config.js      # Tailwind configuration
+/                   # Root directory
+├── app/            # App Router directory
+│   ├── page.tsx    # Homepage
+│   ├── services/   # Services pages
+│   │   ├── page.tsx                # Services overview
+│   │   ├── [slug]/                 # Dynamic service pages
+│   │   │   ├── page.tsx            # Individual service page
+│   │   │   └── [location]/         # Location-specific service pages
+│   │   │       └── page.tsx        # Service in location page
+│   ├── contact/    # Contact page and form
+│   ├── sitemap.ts  # Dynamic sitemap generation
+│   └── ...         # Other pages
+├── components/     # Shared React components
+├── lib/            # Utility functions and data
+├── public/         # Static assets
+└── ...
 ```
 
-## Pages
+## Contact Form
 
-1. **Homepage** (`/`): Company overview, services highlight, featured projects, and call-to-action
-2. **Services Overview** (`/services`): Grid layout of all available services
-3. **Service Details** (`/services/[slug]`): Detailed page for each service
-4. **Location-Based SEO Pages** (`/services/[service]/[location]`): Service pages targeted to specific locations
-5. **Contact Page** (`/contact`): Contact form, map, and company information
+The website includes a fully functional contact form with:
 
-## Features
+- Client-side validation using React
+- Server-side validation using Zod
+- Email functionality using Resend API
+- Confirmation emails for customers
+- Notification emails for administrators
 
-- **Responsive Design**: Mobile-first approach ensures optimal viewing on all devices
-- **Modern UI**: Clean, technical aesthetic with the brand color scheme
-- **SEO Optimization**: Metadata, OpenGraph tags, and location-specific pages
-- **Performance**: Optimized for Core Web Vitals
-- **Accessibility**: Semantic HTML and proper ARIA attributes
+### Email Configuration
 
-## Getting Started
+Emails are sent using the Resend API. The API key is configured in the `.env` file:
 
-### Prerequisites
-
-- Node.js 18.x or later
-- npm 9.x or later
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/lukethomas01/pendragonnetworks.git
-cd pendragonnetworks
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
+```
+RESEND_API_KEY=your_resend_api_key
 ```
 
-The site will be available at http://localhost:3000
+For production deployment on Vercel, add the RESEND_API_KEY to your environment variables.
 
-### Building for Production
+## SEO
 
-```bash
-# Create an optimized production build
-npm run build
+The website is optimized for search engines with:
 
-# Start the production server
-npm start
-```
+- Dynamic metadata for all pages
+- OpenGraph data for social sharing
+- JSON-LD structured data using Schema.org
+- Comprehensive sitemap generation
+- SEO-friendly URLs
+
+### Sitemap
+
+The sitemap is automatically generated based on the services and locations data. When adding new services or locations, the sitemap will update automatically.
 
 ## Deployment
 
-This project is optimized for deployment on Vercel without any special configuration.
+The website is configured for deployment on Vercel with no special configuration needed.
 
-## Design Considerations
+## License
 
-- **Color Palette**:
-  - Dark slate (`#1a1a1a`): Primary background color
-  - Dragon red (`#e60000`): Accent color for buttons and highlights
-  - White (`#ffffff`): Text and contrast elements
-
-- **Typography**: 
-  - Geist Sans for body text and headings
-  - Geist Mono for code blocks and technical elements
-
-- **Imagery**:
-  - Modern technical imagery that reflects network engineering and IT infrastructure
-  - Placeholder divs are included where actual images will be added later
-
-## Future Enhancements
-
-- Add authentication for client area
-- Add case studies for completed projects
-- Expand location-specific service pages
-- Enhance schema.org structured data
-- Integrate with a CMS for easier content management
+Copyright © 2025 Pendragon Networks. All rights reserved.
