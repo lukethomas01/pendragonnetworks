@@ -112,8 +112,7 @@ export function generateCustomerEmail(customerName: string, service?: string) {
           <div class="contact-info">
             <strong>Our Contact Information:</strong><br>
             Email: ${companyInfo.email}<br>
-            Phone: ${companyInfo.phone}<br>
-            Address: ${companyInfo.address}
+            Phone: ${companyInfo.phone}
           </div>
         </div>
         
