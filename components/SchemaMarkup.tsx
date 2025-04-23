@@ -1,10 +1,9 @@
 'use client';
 
-import { ReactNode } from 'react';
-
+// A simpler approach to avoid TypeScript errors for schema data
 type SchemaProps = {
   type: 'LocalBusiness' | 'Organization' | 'Service' | 'FAQPage';
-  data: any;
+  data: Record<string, any>;
 };
 
 const SchemaMarkup = ({ type, data }: SchemaProps) => {

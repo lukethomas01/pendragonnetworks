@@ -91,11 +91,9 @@ const ProjectCard = ({
 
 // Accreditation badge
 const AccreditationBadge = ({ 
-  name, 
-  logo 
+  name 
 }: { 
-  name: string; 
-  logo: string;
+  name: string;
 }) => (
   <div className="bg-white/5 p-4 rounded-lg flex items-center justify-center h-20">
     <div className="text-center">
@@ -299,10 +297,10 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <AccreditationBadge name="Cisco Certified Partner" logo="cisco-logo" />
-            <AccreditationBadge name="Ubiquiti Enterprise Systems" logo="ubiquiti-logo" />
-            <AccreditationBadge name="CompTIA Network+" logo="comptia-logo" />
-            <AccreditationBadge name="Microsoft Certified" logo="microsoft-logo" />
+            <AccreditationBadge name="Cisco Certified Partner" />
+            <AccreditationBadge name="Ubiquiti Enterprise Systems" />
+            <AccreditationBadge name="CompTIA Network+" />
+            <AccreditationBadge name="Microsoft Certified" />
           </div>
         </div>
       </section>

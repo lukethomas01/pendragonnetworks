@@ -58,9 +58,9 @@ A modern, responsive website for Pendragon Networks, a technical services provid
 ### Installation
 
 ```bash
-# Clone the repository (if applicable)
-git clone https://github.com/your-username/pendragon-networks.git
-cd pendragon-networks
+# Clone the repository
+git clone https://github.com/lukethomas01/pendragonnetworks.git
+cd pendragonnetworks
 
 # Install dependencies
 npm install
@@ -103,6 +103,7 @@ This project is optimized for deployment on Vercel without any special configura
 ## Future Enhancements
 
 - Add authentication for client area
-- Implement blog/news section
 - Add case studies for completed projects
+- Expand location-specific service pages
+- Enhance schema.org structured data
 - Integrate with a CMS for easier content management

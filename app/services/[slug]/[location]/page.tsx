@@ -36,8 +36,16 @@ export function generateStaticParams() {
   );
 }
 
+// Define metadata props type
+type MetadataProps = {
+  params: {
+    slug: string;
+    location: string;
+  };
+};
+
 // Generate metadata for each service-location page
-export async function generateMetadata({ params }: { params: { slug: string, location: string }}): Promise<Metadata> {
+export async function generateMetadata({ params }: MetadataProps): Promise<Metadata> {
   const serviceLocation = getServiceLocation(params.slug, params.location);
   
   if (!serviceLocation) {
@@ -66,7 +74,15 @@ export async function generateMetadata({ params }: { params: { slug: string, loc
   };
 }
 
-export default async function ServiceLocationPage({ params }: { params: { slug: string, location: string }}) {
+// Define types according to Next.js 15 requirements
+type ServiceLocationPageProps = {
+  params: {
+    slug: string;
+    location: string;
+  };
+};
+
+export default async function ServiceLocationPage({ params }: ServiceLocationPageProps) {
   const serviceData = getServiceById(params.slug);
   const locationData = getLocationById(params.location);
   

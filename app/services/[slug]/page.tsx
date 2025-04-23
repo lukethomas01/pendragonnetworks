@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { getServiceById, Service } from "@/lib/data";
+import { getServiceById } from "@/lib/data";
 import { notFound } from "next/navigation";
 import SchemaMarkup from "@/components/SchemaMarkup";
 
