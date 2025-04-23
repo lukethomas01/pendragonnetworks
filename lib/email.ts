@@ -53,6 +53,9 @@ export function generateCustomerEmail(customerName: string, service?: string) {
         }
         .logo {
           max-height: 60px;
+          max-width: 100%;
+          height: auto;
+          width: auto;
           margin-bottom: 10px;
         }
         .content {
@@ -162,6 +165,9 @@ export function generateBusinessEmail(
         }
         .logo {
           max-height: 50px;
+          max-width: 100%;
+          height: auto;
+          width: auto;
           margin-bottom: 10px;
         }
         .content {
