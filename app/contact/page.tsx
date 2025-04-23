@@ -24,7 +24,7 @@ export default function ContactPage() {
             addressCountry: "UK"
           },
           telephone: "+44 7916 214 843",
-          email: "hello@pendragonnetworks.co.uk",
+          email: "hello@pendragonnetworks.com",
           openingHours: [
             {
               '@type': 'OpeningHoursSpecification',
@@ -85,10 +85,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-bold mb-1">Email Us</h3>
                     <a 
-                      href="mailto:hello@pendragonnetworks.co.uk" 
+                      href="mailto:hello@pendragonnetworks.com" 
                       className="text-dragon-red hover:underline"
                     >
-                      hello@pendragonnetworks.co.uk
+                      hello@pendragonnetworks.com
                     </a>
                     <p className="text-white/60 mt-1">
                       We aim to respond to all enquiries within 24 hours.
@@ -127,39 +127,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="bg-dragon-red p-3 rounded-lg mr-4">
-                    <svg 
-                      className="w-6 h-6 text-white" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24" 
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" 
-                      />
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Visit Us</h3>
-                    <address className="text-white not-italic">
-                      Pendragon Networks<br />
-                      Unit 8, Bridgend Business Park<br />
-                      Bridgend, CF31 3SH<br />
-                      South Wales, United Kingdom
-                    </address>
-                  </div>
-                </div>
+                {/* Visit Us section removed as requested */}
               </div>
               
               <div className="mb-8">

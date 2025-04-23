@@ -316,8 +316,8 @@ export default async function ServiceLocationPage({ params }: ServiceLocationPag
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
                       />
                     </svg>
-                    <a href="mailto:hello@pendragonnetworks.co.uk" className="text-dragon-red hover:underline">
-                      hello@pendragonnetworks.co.uk
+                    <a href="mailto:hello@pendragonnetworks.com" className="text-dragon-red hover:underline">
+                      hello@pendragonnetworks.com
                     </a>
                   </div>
                   <div className="flex items-start">
@@ -440,7 +440,7 @@ export default async function ServiceLocationPage({ params }: ServiceLocationPag
               </Link>
               <a 
                 href={`tel:+447916214843`}
-                className="border border-white hover:bg-white hover:text-dragon-red text-white px-6 py-3 rounded-md text-center transition-all duration-200 inline-flex items-center justify-center"
+                className="bg-white text-dragon-red hover:bg-opacity-90 px-6 py-3 rounded-md text-center transition-all duration-200 inline-flex items-center justify-center"
               >
                 <svg 
                   className="w-5 h-5 mr-2" 
